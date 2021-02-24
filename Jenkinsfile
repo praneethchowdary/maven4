@@ -11,6 +11,7 @@ pipeline {
                         mvn clean install -f pom.xml
                     """
                 }
+                archiveArtifacts artifacts: "target/*", defaultExcludes: false
             }
         }
         stage('test') {
